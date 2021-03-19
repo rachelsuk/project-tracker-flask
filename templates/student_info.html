@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Info</title>
+</head>
+<body>
+  <h1>{{ first }} {{ last }}</h1>
+
+  <p>GitHub Account: {{ github }}</p>
+
+  {% for row in rows %}
+    <ul>
+        <li><a href="./project?title={{ row[0] }}">{{ row[0] }}</a>: {{ row[1] }}</li>
+    </ul>
+  {% endfor %}  
+</body>
+</html>
